@@ -1,13 +1,12 @@
-﻿package JUnitTesting;
+﻿// To check even number 
+package JUnitTesting;
 
 public class Operations {
 	
 	String result=0;
-	// add two integer numbers
 	public int add(int a,int b) {
 		return a+b;
-	}
-	// check  number is even 
+	} 
 	public boolean isEven(int a) {
 		if(a%2==0) {
 			return true;
