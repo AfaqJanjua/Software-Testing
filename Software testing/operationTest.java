@@ -12,32 +12,27 @@ import org.junit.jupiter.params.ParameterizedTest;
 
 class OperationsTest {
 	int i=0;
-	//parameterized Method
 	@ParameterizedTest
 	@ValueSource(ints = {2,4,6})
 	void checkEven(int x) {
 		BasicOperations b=new BasicOperations();
 		assertTrue(b.isEven(x));
 	}
-	//Repeated Test
 	@RepeatedTest(5)
 	public void repeatIsEven() {
 		BasicOperations b=new BasicOperations();
 		True(b.isEven(100));
 	}
-	//Before Method Test
 	@Before
 	public void First() {
 		i++;
 		System.out.println("Test:"+i+"Start");
 	}
-	//After method Test
 		@After
 		public void Last() {
 			i++;
 			System.out.println("Test:"+i+"End");
 		}
-	// Equals Test
 	@Test
 	public void Equal() {
 		BasicOperations b=new BasicOperations();
@@ -48,7 +43,6 @@ class OperationsTest {
 		BasicOperations b=new BasicOperations();
 		Equals("Not equal",10,bo.add(5, 5));
 	}
-	//NotEquals Tests
 	@Test
 	public void NotEqual() {
 		BasicOperations b=new BasicOperations();
@@ -59,15 +53,11 @@ class OperationsTest {
 		BasicOperations b=new BasicOperations();
 		NotEquals("Equal",100,bo.add(5, 5));
 	}
-	//False Test
 	@Test
 	public void False() {
 		BasicOperations b=new BasicOperations();
 		assertFalse(b.isEven(1));
 	}
-	@Test
-
-	//NotNull Test
 	@Test
 	public void NotNull() {
 		BasicOperations b=new BasicOperations();
@@ -78,7 +68,6 @@ class OperationsTest {
 		BasicOperations b=new BasicOperations();
 		NotNull("Not Null Value",b.isEven(10));
 	}
-	//NotSame Test
 	@Test
 	public void NotSame() {
 		BasicOperations b=new BasicOperations();
@@ -91,7 +80,6 @@ class OperationsTest {
 		BasicOperations b1=new BasicOperations();
 		NotSame("Not Same",b,b1);
 	}
-	//Null Test
 	@Test
 	public void Null() {
 		BasicOperations b=new BasicOperations();
@@ -102,7 +90,6 @@ class OperationsTest {
 		BasicOperations b=new BasicOperations();
 		Null("Null",b.result);
 	}
-	//Same Test
 	@Test
 	public void Same() {
 		BasicOperations b=new BasicOperations();
