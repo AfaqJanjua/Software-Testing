@@ -14,125 +14,110 @@ class OperationsTest {
 	int i=0;
 	//parameterized Method
 	@ParameterizedTest
-	@ValueSource(ints = {2,4,6,8,10})
+	@ValueSource(ints = {2,4,6})
 	void checkEven(int x) {
-		BasicOperations bo=new BasicOperations();
-		assertTrue(bo.isEven(x));
+		BasicOperations b=new BasicOperations();
+		assertTrue(b.isEven(x));
 	}
 	//Repeated Test
 	@RepeatedTest(5)
 	public void repeatIsEven() {
-		BasicOperations bo=new BasicOperations();
-		True(bo.isEven(100));
+		BasicOperations b=new BasicOperations();
+		True(b.isEven(100));
 	}
 	//Before Method Test
 	@Before
-	public void doFirst() {
+	public void First() {
 		i++;
 		System.out.println("Test:"+i+"Start");
 	}
 	//After method Test
 		@After
-		public void doLast() {
+		public void Last() {
 			i++;
 			System.out.println("Test:"+i+"End");
 		}
 	// Equals Test
 	@Test
-	public void isEqual() {
-		BasicOperations bo=new BasicOperations();
+	public void Equal() {
+		BasicOperations b=new BasicOperations();
 		Equals(10,bo.add(5, 5));
 	}
 	@Test
-	public void isEqual02() {
-		BasicOperations bo=new BasicOperations();
+	public void Equal02() {
+		BasicOperations b=new BasicOperations();
 		Equals("Not equal",10,bo.add(5, 5));
 	}
 	//NotEquals Tests
 	@Test
-	public void isNotEqual() {
-		BasicOperations bo=new BasicOperations();
+	public void NotEqual() {
+		BasicOperations b=new BasicOperations();
 		NotEquals(100,bo.add(5, 5));
 	}
 	@Test
-	public void isNotEqual02() {
-		BasicOperations bo=new BasicOperations();
+	public void NotEqual02() {
+		BasicOperations b=new BasicOperations();
 		NotEquals("Equal",100,bo.add(5, 5));
 	}
 	//False Test
 	@Test
-	public void isFalse() {
-		BasicOperations bo=new BasicOperations();
-		assertFalse(bo.isEven(1));
+	public void False() {
+		BasicOperations b=new BasicOperations();
+		assertFalse(b.isEven(1));
 	}
 	@Test
-	public void isFalse02() {
-		BasicOperations bo=new BasicOperations();
-		False("Number is Odd",bo.isEven(1));
-	}
+
 	//NotNull Test
 	@Test
-	public void isNotNull() {
-		BasicOperations bo=new BasicOperations();
-		assertNotNull(bo.isEven(10));
+	public void NotNull() {
+		BasicOperations b=new BasicOperations();
+		assertNotNull(b.isEven(10));
 	}
 	@Test
-	public void isNotNull02() {
-		BasicOperations bo=new BasicOperations();
-		NotNull("Not Null Value",bo.isEven(10));
+	public void NotNull02() {
+		BasicOperations b=new BasicOperations();
+		NotNull("Not Null Value",b.isEven(10));
 	}
 	//NotSame Test
 	@Test
-	public void isNotSame() {
-		BasicOperations bo=new BasicOperations();
-		BasicOperations bo1=new BasicOperations();
-		NotSame(bo,bo1);
+	public void NotSame() {
+		BasicOperations b=new BasicOperations();
+		BasicOperations b1=new BasicOperations();
+		NotSame(b,b1);
 	}
 	@Test
-	public void isNotSame02() {
-		BasicOperations bo=new BasicOperations();
-		BasicOperations bo1=new BasicOperations();
-		NotSame("Not Same",bo,bo1);
+	public void NotSame02() {
+		BasicOperations b=new BasicOperations();
+		BasicOperations b1=new BasicOperations();
+		NotSame("Not Same",b,b1);
 	}
 	//Null Test
 	@Test
-	public void isNull() {
-		BasicOperations bo=new BasicOperations();
-		assertNull(bo.result);
+	public void Null() {
+		BasicOperations b=new BasicOperations();
+		assertNull(b.result);
 	}
 	@Test
-	public void isNull02() {
-		BasicOperations bo=new BasicOperations();
-		Null("Null",bo.result);
+	public void Null02() {
+		BasicOperations b=new BasicOperations();
+		Null("Null",b.result);
 	}
 	//Same Test
 	@Test
-	public void isSame() {
-		BasicOperations bo=new BasicOperations();
-		BasicOperations bo1=bo;
-		assertSame(bo,bo1);
+	public void Same() {
+		BasicOperations b=new BasicOperations();
+		BasicOperations b1=b;
+		assertSame(b,b1);
 	}
+	
 	@Test
-	public void isSame02() {
-		BasicOperations bo=new BasicOperations();
-		BasicOperations bo1=bo;
-		Same("Same",bo,bo1);
-	}
-	//True Test
-	@Test
-	public void isTrue() {
+	public void True() {
 		BasicOperations bo=new BasicOperations();
 		True("Number is even",bo.isEven(2));
 	}
-	@Test
-	public void isTrue02() {
-		BasicOperations bo=new BasicOperations();
-		True("Number is Odd",bo.isEven(8));
-	}
-	//fail Test
-	@Test
+
 	public void failTest() {
-		BasicOperations bo=new BasicOperations();
+		BasicOperations b=new BasicOperations();
 		fail();
 	}
 }
