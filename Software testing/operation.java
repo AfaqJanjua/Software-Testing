@@ -1,8 +1,8 @@
 ﻿package JUnitTesting;
 
-public class BasicOperations {
+public class Operations {
 	
-	String result=null;
+	String result=0;
 	// add two integer numbers
 	public int add(int a,int b) {
 		return a+b;
@@ -14,10 +14,7 @@ public class BasicOperations {
 		}
 		
 	}
-	//check  number is  odd
-		public boolean isOdd(int a) {
-			if(a%2==1) {
-				return true;
+
 			}
 // We follow DMAS rule		
 		}	//Divide (/) method
